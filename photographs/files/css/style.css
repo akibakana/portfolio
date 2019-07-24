@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+@import '../../../files/css/common/reset.css';
+@import '../../../files/css/common/layout.css';
+
+
+
+/* -------------------------------------------------
+    common
+-------------------------------------------------- */
+
+.wrap {
+    max-width: 700px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* -------------------------------------------------
+    header
+-------------------------------------------------- */
+
+/* .header-nav ul li:nth-child(1)::before {
+    display: inline-block;
+    content: '';
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    background: #d36823;
+} */
+
+.header-nav ul li:nth-child(1):hover::before {
+    display: none;
+}
+
+
+/* -------------------------------------------------
+    photographs
+-------------------------------------------------- */
+
+.photographs {
+    padding: 270px 0px 200px;
+}
+    .photographs-images li + li {
+        margin-top: 10px;
+    }
+
+        .photographs-images li img {
+            width: 100%;
+        }
+
+.photographs-title {
+    display: none;
+}
+
+/* -------------------------------------------------
+    pagetop
+-------------------------------------------------- */
+
+/* .pagetop {
+    margin-top: 100px;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 6px;
+}
+
+    .pagetop a {
+        display: block;
+        text-decoration: none;
+        color: #525252;
+    }
+
+        .pagetop a:hover{
+            color: #d36823; 
+            
+    }
+
+
+    .pagetop-image {
+        margin: 0 auto;
+    }
+
+        .pagetop-image img {
+            width: 50px;
+        }
+
+    .pagetop-image:hover img {
+        opacity: 0;
+    }
+        .pagetop-image:hover {
+            background-image: url("../img/pagetop/pagetop_hover.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+
+.pagetop-text {
+    margin-top: 10px; */
+
+.pagetop {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.pagetop.active {
+    position: fixed;
+    display: inline-block;
+    bottom: 50px;
+    width: 90%;
+    text-align: right;
+    opacity: 1;
+}
+
+    .pagetop img {
+        width: 50px;
+    }
+
+    .pagetop img:hover {
+        opacity: 0;
+    }
+
+    .pagetop a {
+        display: inline-block;
+    }
+
+    .pagetop a:hover {
+        background-image: url("../img/pagetop_hover.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+
+@media screen and (max-width: 780px) {  
+
+    .header-nav ul li:nth-child(1)::before {
+        display: none;
+    }
+
+    .photographs {
+        padding: 30vw 0vw 20vw;
+    }
+
+    .photographs-title {
+        display: block;
+        margin: 3vw 0vw 10vw;
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .pagetop img {
+        width: 6vw;
+    }
+    
+    .pagetop.active {
+        bottom: 14px;
+    }
+
+}
