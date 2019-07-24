@@ -93,7 +93,7 @@
     }
 
     .photographs {
-        padding: 30vw 0vw 20vw;
+        padding: 30vw 0vw 32vw;
     }
 
     .photographs-title {
@@ -108,7 +108,15 @@
     }
     
     .pagetop.active {
-        bottom: 14px;
+        bottom: 50px;
+    }
+
+    .pagetop img:hover {
+        opacity: 1;
+    }
+
+    .pagetop a:hover {
+        background-image: none;
     }
 
 }
