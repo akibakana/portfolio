@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import 'reset.css';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
 
@@ -92,10 +91,7 @@ body {
     width: 7vw;
 }  
 
-.hamburger-button.active {
-    opacity: 0.8;
-}
-
+.hamburger-button.active,
 .hamburger-button:hover {
     opacity: 0.8;
 }
@@ -155,12 +151,12 @@ body {
     .header-sp-area {
         display: flex;
         width: 90%;
-        margin: 6.15vw auto 6.15vw;
+        margin: 6.15vw auto;
         justify-content: space-between;
     }
 
     .header-title {
-        font-size:5vw; 
+        font-size: 5vw; 
     }
 
     .header-subtitle {
@@ -191,6 +187,10 @@ body {
             }
 
             .header-nav ul li a:hover::before {
+                display: none;
+            }
+
+            .header-nav ul li.current a::before {
                 display: none;
             }
 
