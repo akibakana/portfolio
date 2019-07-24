@@ -13,14 +13,6 @@ body {
     header
 -------------------------------------------------- */
 
-.header-nav ul li:nth-child(3)::before {
-    display: inline-block;
-    content: '';
-    width: 22px;
-    height: 22px;
-    margin-right: 10px;
-    background: #d36823;
-}
 
 .header-nav ul li:nth-child(3):hover::before {
     display: none;

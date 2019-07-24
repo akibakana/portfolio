@@ -24,19 +24,9 @@
     header
 -------------------------------------------------- */
 
-/* .header-nav ul li:nth-child(1)::before {
-    display: inline-block;
-    content: '';
-    width: 22px;
-    height: 22px;
-    margin-right: 10px;
-    background: #d36823;
-} */
-
 .header-nav ul li:nth-child(1):hover::before {
     display: none;
 }
-
 
 /* -------------------------------------------------
     photographs
@@ -61,46 +51,6 @@
     pagetop
 -------------------------------------------------- */
 
-/* .pagetop {
-    margin-top: 100px;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 6px;
-}
-
-    .pagetop a {
-        display: block;
-        text-decoration: none;
-        color: #525252;
-    }
-
-        .pagetop a:hover{
-            color: #d36823; 
-            
-    }
-
-
-    .pagetop-image {
-        margin: 0 auto;
-    }
-
-        .pagetop-image img {
-            width: 50px;
-        }
-
-    .pagetop-image:hover img {
-        opacity: 0;
-    }
-        .pagetop-image:hover {
-            background-image: url("../img/pagetop/pagetop_hover.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-        }
-
-
-.pagetop-text {
-    margin-top: 10px; */
 
 .pagetop {
     transition: 0.5s ease-in-out;
@@ -109,10 +59,9 @@
 
 .pagetop.active {
     position: fixed;
-    display: inline-block;
+    display: block;
     bottom: 50px;
-    width: 90%;
-    text-align: right;
+    right: 5%;
     opacity: 1;
 }
 
