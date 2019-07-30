@@ -1,0 +1,23 @@
+
+ @import "../common/define.styl";
+ @import "../common/easing.styl";
+ @import "../common/reset.styl";
+ @import "../common/layout.styl";
+
+.main {
+    height: calc(100vh - 220px); 
+    margin-top: 220px;
+    background-image: url("../img/main.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 780px) {  
+
+    .main {
+        height: calc(100vh - 22vw);
+        margin-top: 22vw;
+    }
+
+}
