@@ -19,7 +19,7 @@
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 780px) {  
+@media screen and (max-width: $SW) {  
 
     .main {
         height: calc(100vh - 22vw);

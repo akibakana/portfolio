@@ -7,8 +7,6 @@
 /* -------------------------------------------------
     common
 -------------------------------------------------- */
-
-
 body {
     overflow-y: scroll;
 }
@@ -18,21 +16,9 @@ body {
     margin: 0 auto;
 }
 
-
-
-/* -------------------------------------------------
-    header
--------------------------------------------------- */
-
-
-.header-nav ul li:nth-child(2):hover::before {
-    display: none;
-}
-
 /* -------------------------------------------------
     profile
 -------------------------------------------------- */
-
 .profile {
     padding-top: 270px;
     font-size: 18px;
@@ -64,7 +50,6 @@ body {
 /* -------------------------------------------------
     about
 -------------------------------------------------- */
-
 .about-camera {
     display: flex;
     padding-top: 100px;
@@ -90,7 +75,7 @@ body {
     padding: 100px 0px 200px;
 }
 
-@media screen and (max-width: 780px) {  
+@media screen and (max-width: $SW) {  
 
     .wrap {
         width: 80%;
@@ -143,7 +128,7 @@ body {
     }
     
     .about-film {
-        padding: 12vw 0vw 20vw;
+        padding: 12vw 0 20vw;
     }
 
 }

@@ -21,14 +21,6 @@
 }
 
 /* -------------------------------------------------
-    header
--------------------------------------------------- */
-
-.header-nav ul li:nth-child(1):hover::before {
-    display: none;
-}
-
-/* -------------------------------------------------
     photographs
 -------------------------------------------------- */
 
@@ -37,12 +29,14 @@
 }
 
 .photographs-images {
-    li + li {
-    margin-top: 10px;
-    }
-    li img {
+    li {
+        + li {
+            margin-top: 10px;
+        }
+        img {
             width: 100%;
-    }  
+        }
+    }
 }
 
 .photographs-title {
@@ -52,8 +46,6 @@
 /* -------------------------------------------------
     pagetop
 -------------------------------------------------- */
-
-
 .pagetop {
     transition: 0.5s ease-in-out;
     opacity: 0;
@@ -82,23 +74,20 @@
 
 }
 
-@media screen and (max-width: 780px) {  
+@media screen and (max-width: $SW) {  
 
     .header-nav ul li:nth-child(1)::before {
         display: none;
     }
-
     .photographs {
         padding: 30vw 0vw 32vw;
     }
-
     .photographs-title {
         display: block;
         margin: 3vw 0vw 10vw;
         font-size: 4vw;
         text-align: center;
     }
-
     .pagetop {
         img {
             width: 6vw;
