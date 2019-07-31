@@ -84,53 +84,42 @@ body {
     display: none;
     height: 7vw;
     width: 7vw;
-}  
+	.hamburger-line {
+		position: absolute;
+		width: 100%;
+		height: 0.8vw;
+		background-color: #525252;
+		transition: 0.3s all ease-in-out;
+		&:nth-child(1) {
+			top: 0;
+		}
+		&:nth-child(2) {
+			top: calc(50% - 0.4vw);
+		}
+		&:nth-child(3) {
+			bottom: 0;
+		}
+	}
+	&.active {
+		opacity: 0.8;
+		.hamburger-line {
+			&:nth-child(1) {
+				transform: rotate(-45deg);
+				top: calc(50% - 0.4vw);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: rotate(45deg);
+				bottom: calc(50% - 0.4vw);
+			}
+		}	
 
-.hamburger-button.active,
-.hamburger-button:hover {
-    opacity: 0.8;
+	}
 }
 
-
-    .hamburger-button.active .hamburger-line:nth-child(1) {
-        transform: rotate(-45deg);
-        top: calc(50% - 0.4vw);
-    }
-
-    .hamburger-button.active .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger-button.active .hamburger-line:nth-child(3) {
-        transform: rotate(45deg);
-        bottom: calc(50% - 0.4vw);
-    }
-
-
-.hamburger-line {
-    position: absolute;
-    width: 100%;
-    height: 0.8vw;
-    background-color: #525252;
-    transition: 0.3s all ease-in-out;
-}
-
-    .hamburger-line:nth-child(1) {
-        top: 0;
-    }
-
-    .hamburger-line:nth-child(2) {
-        top: calc(50% - 0.4vw);
-    }
-
-    .hamburger-line:nth-child(3) {
-        bottom: 0;
-    }
-
-
-
-
- @media screen and (max-width: 780px) {
+@media screen and (max-width: 780px) {
 
     .header {
         height: auto;
@@ -161,33 +150,27 @@ body {
 
     .hamburger-button {
         display: block;
-    }
-
-    .hamburger-button:hover {
-        opacity: 1;
+		&:hover {
+            opacity: 1;
+    	}
     }
 
     .header-nav {
         display: none;
         width: 100%;
-     }
-
-        .header-nav ul {
-            text-align: center;
-            margin-top: 20vw;
-        }
-
-            .header-nav ul li {
-                 margin-bottom: 10vw;
+		ul {
+			text-align: center;
+			margin-top: 20vw;
+			li {
+            	margin-bottom: 10vw;
+                a:hover::before,
+                &.current a::before,
+                a::before {
+                    display: none;
+                }
             }
-
-            .header-nav ul li a:hover::before {
-                display: none;
-            }
-
-            .header-nav ul li.current a::before {
-                display: none;
-            }
+		}
+	}
 
      .header-nav.open {
         display: block;
@@ -198,6 +181,5 @@ body {
         right: 0;
         font-size: 4.8vw;
         background-color: $color_accent;
-    }
-
- }
+     }
+}

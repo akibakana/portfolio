@@ -1,153 +1,390 @@
-@charset "utf-8";
-@import '../../../files/css/common/reset.css';
-@import '../../../files/css/common/layout.css';
-
-
-
-
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap");
+body {
+  font-family: "Noto Sans CJK JP";
+  color: #525252;
+  background-color: #fff;
+  letter-spacing: 2px;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
+.header-area {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0px 26px;
+  justify-content: space-between;
+}
+.header-title {
+  font-size: 30px;
+}
+.header-title a {
+  text-decoration: none;
+  color: #525252;
+}
+@media screen and (min-width: 781px) {
+  .header-title a:hover {
+    color: #d36823;
+  }
+}
+.header-subtitle {
+  margin-top: 16px;
+  font-size: 16px;
+}
+.header-nav {
+  font-size: 24px;
+}
+.header-nav ul {
+  text-align: right;
+}
+.header-nav ul li {
+  margin-bottom: 24px;
+}
+.header-nav ul li a {
+  text-decoration: none;
+  color: #525252;
+}
+.header-nav ul li a::before {
+  display: inline-block;
+  content: '';
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  opacity: 0;
+  background: #d36823;
+  transition: 0.5s all ease-out;
+}
+.header-nav ul li a:hover::before,
+.header-nav ul li.current a::before {
+  opacity: 1;
+}
+.hamburger-button {
+  position: relative;
+  display: none;
+  height: 7vw;
+  width: 7vw;
+}
+.hamburger-button .hamburger-line {
+  position: absolute;
+  width: 100%;
+  height: 0.8vw;
+  background-color: #525252;
+  transition: 0.3s all ease-in-out;
+}
+.hamburger-button .hamburger-line:nth-child(1) {
+  top: 0;
+}
+.hamburger-button .hamburger-line:nth-child(2) {
+  top: calc(50% - 0.4vw);
+}
+.hamburger-button .hamburger-line:nth-child(3) {
+  bottom: 0;
+}
+.hamburger-button.active {
+  opacity: 0.8;
+}
+.hamburger-button.active .hamburger-line:nth-child(1) {
+  transform: rotate(-45deg);
+  top: calc(50% - 0.4vw);
+}
+.hamburger-button.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-button.active .hamburger-line:nth-child(3) {
+  transform: rotate(45deg);
+  bottom: calc(50% - 0.4vw);
+}
+@media screen and (max-width: 780px) {
+  .header {
+    height: auto;
+  }
+  .header-area {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+  .header-sp-area {
+    display: flex;
+    width: 90%;
+    margin: 6.15vw auto;
+    justify-content: space-between;
+  }
+  .header-title {
+    font-size: 5vw;
+  }
+  .header-subtitle {
+    font-size: 3vw;
+    margin-top: 10px;
+  }
+  .hamburger-button {
+    display: block;
+  }
+  .hamburger-button:hover {
+    opacity: 1;
+  }
+  .header-nav {
+    display: none;
+    width: 100%;
+  }
+  .header-nav ul {
+    text-align: center;
+    margin-top: 20vw;
+  }
+  .header-nav ul li {
+    margin-bottom: 10vw;
+  }
+  .header-nav ul li a:hover::before,
+  .header-nav ul li.current a::before,
+  .header-nav ul li a::before {
+    display: none;
+  }
+  .header-nav.open {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 21vw;
+    right: 0;
+    font-size: 4.8vw;
+    background-color: #d36823;
+  }
+}
 /* -------------------------------------------------
     common
 -------------------------------------------------- */
-
-
 body {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
-
 .wrap {
-    width: 60%;
-    margin: 0 auto;
+  width: 60%;
+  margin: 0 auto;
 }
-
-
-
 /* -------------------------------------------------
     header
 -------------------------------------------------- */
-
-
 .header-nav ul li:nth-child(2):hover::before {
-    display: none;
+  display: none;
 }
-
 /* -------------------------------------------------
     profile
 -------------------------------------------------- */
-
 .profile {
-    padding-top: 270px;
-    font-size: 18px;
+  padding-top: 270px;
+  font-size: 18px;
 }
-
 .profile-title {
-    display: none;
+  display: none;
 }
-
 .profile-birthday {
-    margin-top: 16px;
+  margin-top: 16px;
 }
-
 .profile-text {
-    margin-top: 40px;
-    font-size: 16px;
-    line-height: 2.2;
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 2.2;
 }
-
 .profile-text::after {
-    display: block;
-    content: '';
-    width: 100%;
-    height: 1px;
-    margin-top: 100px;
-    background-color: #bfbfbf;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  margin-top: 100px;
+  background-color: #bfbfbf;
 }
-
 /* -------------------------------------------------
     about
 -------------------------------------------------- */
-
 .about-camera {
-    display: flex;
-    padding-top: 100px;
+  display: flex;
+  padding-top: 100px;
 }
-
 .about-title {
-    width: 90px;
-    font-size: 20px;
+  width: 90px;
+  font-size: 20px;
 }
-
 .about-list {
-    width: 37vw;
-    margin-left: 10vw;
-    font-size: 16px;
+  width: 37vw;
+  margin-left: 10vw;
+  font-size: 16px;
 }
-
 .about-list li {
-    margin-top: 16px;
-    line-height: 1.3;
+  margin-top: 16px;
+  line-height: 1.3;
 }
-
 .about-film {
-    display: flex;
-    padding: 100px 0px 200px;
+  display: flex;
+  padding: 100px 0px 200px;
 }
-
-@media screen and (max-width: 780px) {  
-
-
-    .wrap {
-        width: 80%;
-    }
-
-    .header-nav ul li:nth-child(2)::before {
-        display: none;
-    }
-
-    .profile {
-        padding-top: 30vw;
-        font-size: 3vw;
-    }
-
-    .profile-title {
-        display: block;
-        margin: 3vw 0vw 10vw;
-        font-size: 4vw;
-        text-align: center;
-    }
-    
-    .profile-birthday {
-        margin-top: 3vw;
-    }
-    
-    .profile-text {
-        margin-top: 10vw;
-        font-size: 2.4vw;
-    }
-
-    .profile-text::after {
-        margin-top: 12vw;
-    }
-
-    .about-camera {
-        padding-top: 12vw;
-    }
-    
-    .about-title {
-        font-size: 3vw;
-    }
-    
-    .about-list {
-        width: 58vw;
-        margin-left: 10vw;
-        font-size: 2.4vw;
-    }
-    
-    .about-list li {
-        margin-top: 2.2vw;
-    }
-    
-    .about-film {
-        padding: 12vw 0vw 20vw;
-    }
-
+@media screen and (max-width: 780px) {
+  .wrap {
+    width: 80%;
+  }
+  .header-nav ul li:nth-child(2)::before {
+    display: none;
+  }
+  .profile {
+    padding-top: 30vw;
+    font-size: 3vw;
+  }
+  .profile-title {
+    display: block;
+    margin: 3vw 0vw 10vw;
+    font-size: 4vw;
+    text-align: center;
+  }
+  .profile-birthday {
+    margin-top: 3vw;
+  }
+  .profile-text {
+    margin-top: 10vw;
+    font-size: 2.4vw;
+  }
+  .profile-text::after {
+    margin-top: 12vw;
+  }
+  .about-camera {
+    padding-top: 12vw;
+  }
+  .about-title {
+    font-size: 3vw;
+  }
+  .about-list {
+    width: 58vw;
+    margin-left: 10vw;
+    font-size: 2.4vw;
+  }
+  .about-list li {
+    margin-top: 2.2vw;
+  }
+  .about-film {
+    padding: 12vw 0vw 20vw;
+  }
 }
