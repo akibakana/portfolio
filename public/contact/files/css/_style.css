@@ -277,46 +277,17 @@ body {
     background-color: #d36823;
   }
 }
-.contact-title {
-  display: none;
-}
-.contact-instagram {
-  margin-top: 400px;
-  font-size: 18px;
-  text-align: center;
-}
-.contact-sns-title {
-  font-size: 24px;
-}
-.contact-text {
-  margin-top: 20px;
-}
-.contact-email {
-  margin-top: 70px;
-  font-size: 18px;
-  text-align: center;
+.main {
+  height: calc(100vh - 220px);
+  margin-top: 220px;
+  background-image: url("../img/main.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media screen and (max-width: 780px) {
-  .contact {
-    padding-top: 30vw;
-  }
-  .contact-title {
-    display: block;
-    margin: 3vw 0vw 5vw;
-    font-size: 4vw;
-    text-align: center;
-  }
-  .contact-instagram {
-    margin-top: 20vw;
-    font-size: 2.6vw;
-  }
-  .contact-sns-title {
-    font-size: 3vw;
-  }
-  .contact-text {
-    margin-top: 5vw;
-  }
-  .contact-email {
-    font-size: 2.6vw;
+  .main {
+    height: calc(100vh - 22vw);
+    margin-top: 22vw;
   }
 }
