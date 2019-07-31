@@ -35,13 +35,15 @@
 .photographs {
     padding: 270px 0px 200px;
 }
-    .photographs-images li + li {
-        margin-top: 10px;
-    }
 
-        .photographs-images li img {
+.photographs-images {
+    li + li {
+    margin-top: 10px;
+    }
+    li img {
             width: 100%;
-        }
+    }  
+}
 
 .photographs-title {
     display: none;
@@ -55,36 +57,30 @@
 .pagetop {
     transition: 0.5s ease-in-out;
     opacity: 0;
-}
-
-.pagetop.active {
-    position: fixed;
-    display: block;
-    bottom: 50px;
-    right: 5%;
-    opacity: 1;
-}
-
-    .pagetop img {
+    &.active {
+        position: fixed;
+        display: block;
+        bottom: 50px;
+        right: 5%;
+        opacity: 1;
+    }
+    img {
         width: 50px;
+        &:hover {
+            opacity: 0;
+        }
     }
-
-    .pagetop img:hover {
-        opacity: 0;
-    }
-
-    .pagetop a {
+    a {
         display: inline-block;
+            &:hover {
+                background-image: url("../img/pagetop_hover.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
     }
 
-    .pagetop a:hover {
-        background-image: url("../img/pagetop_hover.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-
+}
 
 @media screen and (max-width: 780px) {  
 
@@ -103,20 +99,18 @@
         text-align: center;
     }
 
-    .pagetop img {
-        width: 6vw;
+    .pagetop {
+        img {
+            width: 6vw;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &.active {
+            bottom: 50px;
+        }
+        a:hover {
+            background-image: none;
+        }
     }
-    
-    .pagetop.active {
-        bottom: 50px;
-    }
-
-    .pagetop img:hover {
-        opacity: 1;
-    }
-
-    .pagetop a:hover {
-        background-image: none;
-    }
-
 }

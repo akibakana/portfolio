@@ -355,11 +355,11 @@ body {
   .pagetop img {
     width: 6vw;
   }
-  .pagetop.active {
-    bottom: 50px;
-  }
   .pagetop img:hover {
     opacity: 1;
+  }
+  .pagetop.active {
+    bottom: 50px;
   }
   .pagetop a:hover {
     background-image: none;
