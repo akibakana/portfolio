@@ -221,7 +221,7 @@ body {
   transform: rotate(45deg);
   bottom: calc(50% - 0.4vw);
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: $SW) {
   .header {
     height: auto;
   }
@@ -285,7 +285,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: $SW) {
   .main {
     height: calc(100vh - 22vw);
     margin-top: 22vw;
