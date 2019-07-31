@@ -1,2 +1,3 @@
 -cmd stylus src/stylus/top/style.styl -o public/files/css/
 -cmd stylus src/stylus/photographs/style.styl -o public/photographs/files/css/
+-cmd stylus src/stylus/about/style.styl -o public/about/files/css/
