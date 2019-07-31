@@ -121,9 +121,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese");
 body {
-  font-family: "Noto Sans CJK JP";
+  font-family: 'Noto Sans JP', sans-serif;
   color: #525252;
   background-color: #fff;
   letter-spacing: 2px;
