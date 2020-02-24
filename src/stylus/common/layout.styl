@@ -79,37 +79,31 @@ body {
 .hamburger-button {
     position: relative;
     display: none;
-    height: 7vw;
+    height: 3vw;
     width: 7vw;
 	.hamburger-line {
 		position: absolute;
 		width: 100%;
-		height: 0.8vw;
+		height: 1px;
 		background-color: #525252;
-		transition: 0.3s all ease-in-out;
-		&:nth-child(1) {
+		transition: 0.4s all ease-in-out;
+		&:first-child  {
 			top: 0;
 		}
-		&:nth-child(2) {
-			top: calc(50% - 0.4vw);
-		}
-		&:nth-child(3) {
+		&:last-child {
 			bottom: 0;
 		}
 	}
 	&.active {
 		opacity: 0.8;
 		.hamburger-line {
-			&:nth-child(1) {
+			&:first-child {
 				transform: rotate(-45deg);
-				top: calc(50% - 0.4vw);
+				top: calc(50% - 0.5px);
 			}
-			&:nth-child(2) {
-				opacity: 0;
-			}
-			&:nth-child(3) {
+			&:last-child {
 				transform: rotate(45deg);
-				bottom: calc(50% - 0.4vw);
+				bottom: calc(50% - 0.5px);
 			}
 		}	
 
@@ -132,7 +126,7 @@ body {
     .header-sp-area {
         display: flex;
         width: 90%;
-        margin: 6.15vw auto;
+        margin: 5.55vw auto;
         justify-content: space-between;
     }
 
@@ -174,7 +168,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100vh;
-        top: 21vw;
+        top: 16vw;
         right: 0;
         font-size: 4.8vw;
         background-color: $color_accent;
