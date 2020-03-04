@@ -128,10 +128,11 @@ body {
         width: 90%;
         margin: 5.55vw auto;
         justify-content: space-between;
-    }
-
-    .header-title {
-        font-size: 5vw; 
+        .header-title {
+            font-size: 5vw; 
+            position: relative;
+            z-index: 100;
+        }
     }
 
     .header-subtitle {
@@ -141,6 +142,7 @@ body {
 
     .hamburger-button {
         display: block;
+        z-index: 1000;
 		&:hover {
             opacity: 1;
     	}

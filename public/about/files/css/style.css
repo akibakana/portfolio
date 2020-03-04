@@ -230,8 +230,10 @@ body {
     margin: 5.55vw auto;
     justify-content: space-between;
   }
-  .header-title {
+  .header-sp-area .header-title {
     font-size: 5vw;
+    position: relative;
+    z-index: 100;
   }
   .header-subtitle {
     font-size: 3vw;
@@ -239,6 +241,7 @@ body {
   }
   .hamburger-button {
     display: block;
+    z-index: 1000;
   }
   .hamburger-button:hover {
     opacity: 1;
