@@ -303,6 +303,7 @@ body {
     pagetop
 -------------------------------------------------- */
 .pagetop {
+  cursor: pointer;
   transition: 0.5s ease-in-out;
   opacity: 0;
 }
@@ -314,7 +315,7 @@ body {
   opacity: 1;
 }
 .pagetop img {
-  width: 50px;
+  width: 80px;
 }
 .pagetop img:hover {
   opacity: 0;
@@ -333,7 +334,7 @@ body {
     display: none;
   }
   .photographs {
-    padding: 30vw 0vw 32vw;
+    padding: 30vw 0vw 22vw;
   }
   .photographs-title {
     display: block;
@@ -342,13 +343,14 @@ body {
     text-align: center;
   }
   .pagetop img {
-    width: 6vw;
+    width: 13vw;
   }
   .pagetop img:hover {
     opacity: 1;
   }
   .pagetop.active {
-    bottom: 50px;
+    bottom: 30px;
+    right: 1%;
   }
   .pagetop a:hover {
     background-image: none;

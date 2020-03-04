@@ -47,6 +47,7 @@
     pagetop
 -------------------------------------------------- */
 .pagetop {
+    cursor: pointer;
     transition: 0.5s ease-in-out;
     opacity: 0;
     &.active {
@@ -57,7 +58,7 @@
         opacity: 1;
     }
     img {
-        width: 50px;
+        width: 80px;
         &:hover {
             opacity: 0;
         }
@@ -80,7 +81,7 @@
         display: none;
     }
     .photographs {
-        padding: 30vw 0vw 32vw;
+        padding: 30vw 0vw 22vw;
     }
     .photographs-title {
         display: block;
@@ -90,13 +91,14 @@
     }
     .pagetop {
         img {
-            width: 6vw;
+            width: 13vw;
             &:hover {
                 opacity: 1;
             }
         }
         &.active {
-            bottom: 50px;
+            bottom: 30px;
+            right: 1%;
         }
         a:hover {
             background-image: none;
