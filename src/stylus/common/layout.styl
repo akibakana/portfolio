@@ -17,164 +17,141 @@ body {
     background-color: #ffffff;
     top: 0;
     left: 0;
-}
-
-.header-area {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    padding: 50px 0px 26px;
-    justify-content: space-between;
-}
-
-.header-title {
-    font-size: 30px;
-    a {
-        text-decoration: none;
-        color: #525252;
-    }
-}
-
-@media screen and (min-width: 781px) {
-
-    .header-title a:hover {
-        color: $color_accent;
-    }
-
-}
-
-.header-subtitle {
-    margin-top: 16px;
-    font-size: 16px;
-}
-
-.header-nav {
-    font-size: 24px;
-    ul {
-        text-align: right;
-        li {
-            margin-bottom: 24px;
+    .header-area {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px 0px 26px;
+        justify-content: space-between;
+        .header-title {
+            font-size: 30px;
             a {
                 text-decoration: none;
                 color: #525252;
-				&::before {
-                	display: inline-block;
-					content: '';
-					width: 22px;
-					height: 22px;
-					margin-right: 10px;
-					opacity: 0;
-					background: $color_accent;
-					transition: 0.5s all ease-out;
-				}
             }
-            a:hover::before,
-            &.current a::before {
-				opacity: 1;
+        }
+        .header-nav {
+            color: #525252;
+            font-size: 24px;
+            ul {
+                text-align: right;
+                li {
+                    margin-bottom: 24px;
+                    a {
+                        text-decoration: none;
+                        color: #525252;
+                        &::before {
+                            display: inline-block;
+                            content: '';
+                            width: 22px;
+                            height: 22px;
+                            margin-right: 10px;
+                            opacity: 0;
+                            background: $color_accent;
+                            transition: 0.5s all ease-out;
+                        }
+                        &:hover {
+                            &::before {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .current {
+                    a {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
-		}
-	}
-}
+        }
+    }  
+} 
 
-.hamburger-button {
-    position: relative;
-    display: none;
-    height: 3vw;
-    width: 7vw;
-	.hamburger-line {
-		position: absolute;
-		width: 100%;
-		height: 1px;
-		background-color: #525252;
-		transition: 0.3s all ease-in-out;
-		&:first-child {
-			top: 0;
-		}
-		&:last-child {
-			bottom: 0;
-		}
-	}
-	&.active {
-		opacity: 0.8;
-		.hamburger-line {
-			&:first-child {
-				transform: rotate(-45deg);
-				top: calc(50% - 0.5px);
-			}
-			&:last-child {
-				transform: rotate(45deg);
-				bottom: calc(50% - 0.5px);
-			}
-		}	
-
-	}
-}
 
 @media screen and (max-width: $SW) {
-
     .header {
-        height: auto;
-    }
-
-     .header-area {
-         position: relative;
-         padding: 0;
-         width: 100%;
-         margin: auto;
-    }
-
-    .header-sp-area {
-        display: flex;
-        width: 90%;
-        margin: 5.55vw auto;
-        justify-content: space-between;
-        .header-title {
-            font-size: 5vw; 
+        .header-area {
             position: relative;
-            z-index: 100;
-        }
-    }
-
-    .header-subtitle {
-        font-size: 3vw;
-        margin-top: 10px;
-    }
-
-    .hamburger-button {
-        display: block;
-        z-index: 1000;
-		&:hover {
-            opacity: 1;
-    	}
-    }
-
-    .header-nav {
-        width: 100%;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 16vw;
-        right: -100%;
-        font-size: 4.8vw;
-        background-color: $color_accent;
-        opacity: 0;
-        transition: 0.5s all;
-		ul {
-			text-align: center;
-			margin-top: 20vw;
-			li {
-            	margin-bottom: 10vw;
-                a:hover::before,
-                &.current a::before,
-                a::before {
+            padding: 0;
+            width: 100%;
+            margin: auto;
+            .header-sp-area {
+                width: 90%;
+                margin: 5.55vw;
+                .header-title {
+                    font-size: 5vw; 
+                    position: relative;
+                }
+                &.active {
                     display: none;
                 }
             }
-		}
-	}
+            .hamburger-button {
+                position: relative;
+                display: block;
+                margin: 6.55vw;
+                height: 3vw;
+                width: 7vw;
+                z-index: 1000;
+                .hamburger-line {
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #525252;
+                    transition: 0.3s all ease-in-out;
+                    &:first-child {
+                        top: 0;
+                    }
+                    &:last-child {
+                        bottom: 0;
+                    }
+                }
+                &.active {
+                    position: absolute;
+                    opacity: 0.8;
+                    right: 0;
+                    .hamburger-line {
+                        &:first-child {
+                            transform: rotate(-45deg);
+                            top: calc(50% - 1px);
+                        }
+                        &:last-child {
+                            transform: rotate(45deg);
+                            bottom: calc(50% - 1px);
+                        }
+                    }	
 
-     .header-nav.open {
-        opacity: 1;
-        right: 0;
-     }
+                }
+            }
+            .header-nav {
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                right: -100%;
+                font-size: 6vw;
+                background-color: rgba(211,104,35,0.95);
+                transition: 0.5s all;
+                z-index: 100;
+                ul {
+                    margin-top: 35vw;
+                    text-align: center;
+                    li {
+                        margin-bottom: 15vw;
+                        a {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                &.open {
+                    width: 100%; 
+                    right: 0;
+                }
+            }
+        }
+    }
 }
+
